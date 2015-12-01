@@ -1,58 +1,58 @@
-variable "name" {}
-variable "artifact_type" {}
-variable "region" {}
-variable "sub_domain" {}
-variable "atlas_environment" {}
-variable "atlas_aws_global" {}
-variable "atlas_token" {}
-variable "atlas_username" {}
-variable "site_public_key" {}
-variable "site_private_key" {}
-variable "site_ssl_cert" {}
-variable "site_ssl_key" {}
-variable "vault_ssl_cert" {}
-variable "vault_ssl_key" {}
-variable "vault_token" { default = "" }
+variable "name"              { }
+variable "artifact_type"     { }
+variable "region"            { }
+variable "sub_domain"        { }
+variable "atlas_environment" { }
+variable "atlas_aws_global"  { }
+variable "atlas_token"       { }
+variable "atlas_username"    { }
+variable "site_public_key"   { }
+variable "site_private_key"  { }
+variable "site_ssl_cert"     { }
+variable "site_ssl_key"      { }
+variable "vault_ssl_cert"    { }
+variable "vault_ssl_key"     { }
+variable "vault_token"       { default = "" }
 
-variable "vpc_cidr" {}
-variable "azs" {}
-variable "private_subnets" {}
-variable "ephemeral_subnets" {}
-variable "public_subnets" {}
+variable "vpc_cidr"          { }
+variable "azs"               { }
+variable "private_subnets"   { }
+variable "ephemeral_subnets" { }
+variable "public_subnets"    { }
 
-variable "bastion_instance_type" {}
-variable "nat_instance_type" {}
+variable "bastion_instance_type" { }
+variable "nat_instance_type"     { }
 
-variable "openvpn_instance_type" {}
-variable "openvpn_ami" {}
-variable "openvpn_user" {}
-variable "openvpn_admin_user" {}
-variable "openvpn_admin_pw" {}
-variable "openvpn_cidr" {}
+variable "openvpn_instance_type" { }
+variable "openvpn_ami"           { }
+variable "openvpn_user"          { }
+variable "openvpn_admin_user"    { }
+variable "openvpn_admin_pw"      { }
+variable "openvpn_cidr"          { }
 
-variable "consul_nodes" {}
-variable "consul_instance_type" {}
-variable "consul_latest_name" {}
-variable "consul_pinned_name" {}
-variable "consul_pinned_version" {}
+variable "consul_nodes"          { }
+variable "consul_instance_type"  { }
+variable "consul_latest_name"    { }
+variable "consul_pinned_name"    { }
+variable "consul_pinned_version" { }
 
-variable "vault_nodes" {}
-variable "vault_instance_type" {}
-variable "vault_latest_name" {}
-variable "vault_pinned_name" {}
-variable "vault_pinned_version" {}
+variable "vault_nodes"          { }
+variable "vault_instance_type"  { }
+variable "vault_latest_name"    { }
+variable "vault_pinned_name"    { }
+variable "vault_pinned_version" { }
 
-variable "haproxy_nodes" {}
-variable "haproxy_instance_type" {}
-variable "haproxy_latest_name" {}
-variable "haproxy_pinned_name" {}
-variable "haproxy_pinned_version" {}
+variable "haproxy_nodes"          { }
+variable "haproxy_instance_type"  { }
+variable "haproxy_latest_name"    { }
+variable "haproxy_pinned_name"    { }
+variable "haproxy_pinned_version" { }
 
-variable "nodejs_nodes" {}
-variable "nodejs_instance_type" {}
-variable "nodejs_latest_name" {}
-variable "nodejs_pinned_name" {}
-variable "nodejs_pinned_version" {}
+variable "nodejs_nodes"          { }
+variable "nodejs_instance_type"  { }
+variable "nodejs_latest_name"    { }
+variable "nodejs_pinned_name"    { }
+variable "nodejs_pinned_version" { }
 
 provider "aws" {
   region = "${var.region}"
